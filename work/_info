@@ -75,7 +75,7 @@ Abehavioral
 R1
 R2
 R3
-Z16 DEx4 work 11 dhcp_server 0 22 izLolke<a?3N1^[kQSP>62
+DEx4 work 11 dhcp_server 0 22 izLolke<a?3N1^[kQSP>62
 l74
 L20
 VGRV2hNS6^?>HmRCOR9CD03
@@ -91,31 +91,31 @@ R9
 R10
 R11
 Edhcp_system_textio
-Z17 w1733290315
+Z16 w1733290315
 R1
 R2
 R3
 R4
-Z18 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
-Z19 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
+Z17 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
+Z18 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
 l0
 L5
 V6N4a5KCG;UML68`ne@I;91
 !s100 b?>N^N?1D1lN89R;OQ1Yh3
 R7
 32
-Z20 !s110 1733290331
+Z19 !s110 1733290331
 !i10b 1
-Z21 !s108 1733290331.000000
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
-Z23 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
+Z20 !s108 1733290331.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
+Z22 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
 !i113 1
 R10
 R11
 Astructural
-Z24 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z25 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z26 DEx4 work 19 vlan_manager_textio 0 22 JA[`8L7>RMd1dm]W5ZSQ01
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z24 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z25 DEx4 work 19 vlan_manager_textio 0 22 JA[`8L7>RMd1dm]W5ZSQ01
 R12
 R1
 R2
@@ -127,33 +127,33 @@ VMdMIiTHc<=m3A3FIOLl3L1
 !s100 @Lc_`OknDd^P?l0EZ6USZ1
 R7
 32
-R20
+R19
 !i10b 1
+R20
 R21
 R22
-R23
 !i113 1
 R10
 R11
 Etb_dhcp_system_textio
-Z27 w1733290312
+Z26 w1733290312
 R1
 R2
 R3
 R4
-Z28 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl
-Z29 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl
+Z27 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl
+Z28 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl
 l0
 L5
 V69PVGhmcHTW749gbMnjg:1
 !s100 iLbL<z^_;4:J@kPoeg]_J0
 R7
 32
-Z30 !s110 1733290333
+Z29 !s110 1733290333
 !i10b 1
-Z31 !s108 1733290333.000000
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl|
-Z33 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl|
+Z30 !s108 1733290333.000000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl|
+Z32 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/tb.vhdl|
 !i113 1
 R10
 R11
@@ -168,40 +168,40 @@ V5Uo9mf<JHQ9MJz=4@VeCI3
 !s100 j5E[dN976M@=A[ez5J`gX2
 R7
 32
-R30
+R29
 !i10b 1
+R30
 R31
 R32
-R33
 !i113 1
 R10
 R11
 Etextio_example
-Z34 w1733223717
+Z33 w1733223717
+R23
 R24
-R25
 R2
 R3
 R4
+R17
 R18
-R19
 l0
 L7
 Vo?2F6RAQec@f5EO<?]T7H0
 !s100 `a]Vi<EK]WMAZV6f8mGS71
 R7
 32
-Z35 !s110 1733223724
+Z34 !s110 1733223724
 !i10b 1
-Z36 !s108 1733223724.000000
+Z35 !s108 1733223724.000000
+R21
 R22
-R23
 !i113 1
 R10
 R11
 Abehavioral
+R23
 R24
-R25
 R2
 R3
 DEx4 work 14 textio_example 0 22 o?2F6RAQec@f5EO<?]T7H0
@@ -211,54 +211,95 @@ ValTnLdAlYNViU5>@D:f=V0
 !s100 zUf?o?=SfbnKBTB;S[3ic3
 R7
 32
-R35
+R34
 !i10b 1
-R36
+R35
+R21
 R22
-R23
+!i113 1
+R10
+R11
+Evlan_allocation
+Z36 w1733344419
+R1
+R2
+R3
+R4
+Z37 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
+Z38 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
+l0
+L5
+V112`^ndOC`b6ZW6W@khoz3
+!s100 df0d@4aDakNd_5hD_acOW3
+R7
+32
+Z39 !s110 1733344436
+!i10b 1
+Z40 !s108 1733344436.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
+Z42 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
+!i113 1
+R10
+R11
+Abehavioral
+R1
+R2
+R3
+DEx4 work 15 vlan_allocation 0 22 112`^ndOC`b6ZW6W@khoz3
+l22
+L13
+Ve@JMHL1D]NFM^SEQ[e4QQ3
+!s100 k`ahnm<e5=5_Y0l3L_PfN3
+R7
+32
+R39
+!i10b 1
+R40
+R41
+R42
 !i113 1
 R10
 R11
 Evlan_manager_textio
-Z37 w1733290313
+Z43 w1733290313
+R23
 R24
-R25
 R2
 R3
 R4
-Z38 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
-Z39 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
+R37
+R38
 l0
 L7
 VJA[`8L7>RMd1dm]W5ZSQ01
 !s100 Z]DLYg^80DWHRAEORUT5H0
 R7
 32
-Z40 !s110 1733290336
+Z44 !s110 1733290336
 !i10b 1
-Z41 !s108 1733290336.000000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
-Z43 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
+Z45 !s108 1733290336.000000
+R41
+R42
 !i113 1
 R10
 R11
 Abehavioral
+R23
 R24
-R25
 R2
 R3
-R26
+R25
 l31
 L15
 VJ<ZS4zV`VQGdPXNR]81ZU0
 !s100 NO80F1Ci^TEUgT?]nPoVT1
 R7
 32
-R40
+R44
 !i10b 1
+R45
 R41
 R42
-R43
 !i113 1
 R10
 R11

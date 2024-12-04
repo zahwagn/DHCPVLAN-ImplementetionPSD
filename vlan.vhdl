@@ -1,64 +1,58 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use std.textio.all;
+use IEEE.NUMERIC_STD.ALL;
 
-entity vlan_manager_textio is
-    Port (
-        clk        : in  std_logic;
-        vlan_id    : in  std_logic_vector(7 downto 0);
-        valid_vlan : out std_logic
-    );
-end vlan_manager_textio;
+entity VLAN_Allocation is
+    Port ( clk           : in  STD_LOGIC;
+           reset         : in  STD_LOGIC;
+           total_vlans   : in  integer range 1 to 10;    -- Input total number of VLANs
+           done          : out STD_LOGIC                     -- Process completion flag
+           );
+end VLAN_Allocation;
 
-architecture Behavioral of vlan_manager_textio is
+architecture Behavioral of VLAN_Allocation is
 
-    -- Fungsi konversi string ke std_logic_vector
-    function to_stdlogicvector(input: string) return std_logic_vector is
-        variable result : std_logic_vector(input'length - 1 downto 0);
-    begin
-        for i in input'range loop
-            if input(i) = '1' then
-                result(i) := '1';
-            else
-                result(i) := '0';
-            end if;
-        end loop;
-        return result;
-    end function;
+    -- Signal to store VLAN IDs and their corresponding network addresses
+    type integer_array is array (0 to 255) of integer;
+    signal vlan_id_array : integer_array := (others => 0);
+
+    signal vlan_counter : integer := 0;
+    signal state        : integer := 0;
 
 begin
-    process(clk)
-        -- File eksternal untuk VLAN
-        file vlan_table_file : text open read_mode is "vlan_table.txt";
-        
-        -- Variabel untuk membaca file
-        variable vlan_line : line;
-        variable vlan_read : string(1 to 8); -- String untuk 8-bit VLAN ID
-        variable found : boolean := false;
+
+    -- Process to handle VLAN allocation and network addressing
+    process(clk, reset)
     begin
-        if rising_edge(clk) then
-            found := false;
+        if reset = '1' then
+            state <= 0;
+            vlan_counter <= 0;
+            done <= '0';
+            vlan_id_array <= (others => 0);
+        elsif rising_edge(clk) then
+            case state is
+                when 0 =>  -- Initial state, start the process
+                    if total_vlans > 0 then
+                        state <= 1;  -- Proceed to VLAN allocation
+                    end if;
 
-            -- Baca file VLAN dan periksa apakah VLAN ada dalam daftar
-            while not endfile(vlan_table_file) loop
-                readline(vlan_table_file, vlan_line);
-                read(vlan_line, vlan_read);
+                when 1 =>  -- VLAN allocation and network assignment
+                    if vlan_counter < total_vlans then
+                        -- Calculate VLAN ID (kelipatan 10 mulai dari 10)
+                        vlan_id_array(vlan_counter) <= (vlan_counter + 1) * 10;
+                        vlan_counter <= vlan_counter + 1;
+                    else
+                        state <= 2;  -- Finished VLAN assignment
+                    end if;
 
-                -- Konversi string ke std_logic_vector dan bandingkan
-                if vlan_id = to_stdlogicvector(vlan_read) then
-                    found := true;
-                end if;
-            end loop;
+                when 2 =>  -- Indicate completion
+                    done <= '1';
+                    state <= 0;  -- Go back to initial state
 
-            -- Jika ditemukan, set valid_vlan ke '1', jika tidak set '0'
-            if found then
-                valid_vlan <= '1';
-            else
-                valid_vlan <= '0';
-            end if;
+                when others =>  -- Default case
+                    state <= 0;
+
+            end case;
         end if;
     end process;
-
 end Behavioral;
