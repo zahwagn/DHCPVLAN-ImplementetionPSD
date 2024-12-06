@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 use work.types_pkg.ALL;
 
 entity Top_Level_tb is
--- Port();
+    -- Port();
 end Top_Level_tb;
 
 architecture Behavioral of Top_Level_tb is
@@ -28,7 +28,32 @@ architecture Behavioral of Top_Level_tb is
     signal status        : std_logic_vector(9 downto 0);
     signal selesai       : std_logic_vector(9 downto 0);
 
-    constant clk_period : time := 1 ns;
+    constant clk_period : time := 10 ns;
+
+    function to_binary_string(input : std_logic_vector(9 downto 0)) return string is
+        variable result : string(1 to 10);
+    begin
+        for i in 9 downto 0 loop
+            if input(i) = '1' then
+                result(i+1) := '1';
+            else
+                result(i+1) := '0';
+            end if;
+        end loop;
+        return result;
+    end function;
+
+    function to_ip_string(ip: std_logic_vector) return string is
+        variable ip_integer: unsigned(31 downto 0);
+        variable octets: string(1 to 15);
+    begin
+        ip_integer := unsigned(ip);
+        octets := integer'image(to_integer(ip_integer(31 downto 24))) & "." &
+                  integer'image(to_integer(ip_integer(23 downto 16))) & "." &
+                  integer'image(to_integer(ip_integer(15 downto 8))) & "." &
+                  integer'image(to_integer(ip_integer(7 downto 0)));
+        return octets;
+    end function;
 
 begin
     uut: Top_Level
@@ -53,7 +78,7 @@ begin
         wait;
     end process;
 
-    dhcp_vlan_test: process
+    test_dhcp_vlan: process
     begin
         -- Reset the system
         reset <= '1';
@@ -64,22 +89,34 @@ begin
         total_vlans <= 5;
         enable_dhcp <= '1';
         wait for 100 ns;
+        report "Test with 5 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
+        for i in 0 to 4 loop
+            report "VLAN ID " & integer'image(i) & ": IP allocated: " & to_ip_string(ip_addresses(i));
+        end loop;
 
         -- Test with all VLANs
         total_vlans <= 10;
         enable_dhcp <= '1';
         wait for 100 ns;
+        report "Test with 10 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
+        for i in 0 to 9 loop
+            report "VLAN ID " & integer'image(i) & ": IP allocated: " & to_ip_string(ip_addresses(i));
+        end loop;
 
         -- Disable DHCP
         enable_dhcp <= '0';
         wait for 50 ns;
+        report "DHCP disabled. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
 
         -- Test with 3 VLANs
         total_vlans <= 3;
         enable_dhcp <= '1';
         wait for 100 ns;
+        report "Test with 3 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
+        for i in 0 to 2 loop
+            report "VLAN ID " & integer'image(i) & ": IP allocated: " & to_ip_string(ip_addresses(i));
+        end loop;
 
-        -- Finish simulation
         wait;
     end process;
 
