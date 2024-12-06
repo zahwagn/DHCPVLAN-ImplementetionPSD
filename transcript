@@ -1,0 +1,211 @@
+# Compile of fsm_dhcp.vhdl was successful.
+# Compile of serverDHCP.vhdl failed with 6 errors.
+# Compile of tb.vhdl was successful.
+# Compile of Top_Level.vhdl failed with 3 errors.
+# Compile of vlan.vhdl was successful.
+# 5 compiles, 2 failed with 9 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl was successful.
+vsim -gui work.top_level
+# vsim -gui work.top_level 
+# Start time: 19:00:29 on Dec 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_level(structural)
+# Loading work.dhcp_server(behavioral)
+# Loading work.vlan_allocation(behavioral)
+add wave -position insertpoint sim:/top_level/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: raditya  Hostname: BONIFASIUSRF6C0  ProcessID: 3352
+#           Attempting to use alternate WLF file "./wlft9vbg1z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9vbg1z
+force -freeze sim:/top_level/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/top_level/reset U0 0
+# ** UI-Msg: (vsim-4026) Value "u0" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: U0 0.
+# 
+force -freeze sim:/top_level/reset 0 0
+force -freeze sim:/top_level/enable_dhcp 1 0
+force -freeze sim:/top_level/vlan_id 00000000 0
+force -freeze sim:/top_level/enable_dhcp 1 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/top_level/vlan_id 00000001 0
+run
+run -all
+run -all
+# Break key hit
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 2 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of tb.vhdl was successful.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 3 errors.
+# Compile of Top_Level.vhdl failed with 3 errors.
+# Compile of Top_Level.vhdl failed with 3 errors.
+# Compile of types_pkg.vhdl was successful.
+# Compile of Top_Level.vhdl was successful with warnings.
+# Compile of Top_Level.vhdl was successful with warnings.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl failed with 1 errors.
+# Compile of Top_Level.vhdl was successful.
+vsim -gui work.top_level
+# End time: 19:44:27 on Dec 06,2024, Elapsed time: 0:43:58
+# Errors: 0, Warnings: 72
+# vsim -gui work.top_level 
+# Start time: 19:44:27 on Dec 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.types_pkg
+# Loading work.top_level(structural)
+# Loading work.vlan_allocation(behavioral)
+# ** Error: (vsim-86) Argument value -1062731520 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(0)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# Loading work.dhcp_server(behavioral)
+# ** Error: (vsim-86) Argument value -1062731264 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(1)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062731008 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(2)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062730752 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(3)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062730496 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(4)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062730240 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(5)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062729984 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(6)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062729728 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(7)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062729472 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(8)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# ** Error: (vsim-86) Argument value -1062729216 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(9)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+add wave -position insertpoint sim:/top_level/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: raditya  Hostname: BONIFASIUSRF6C0  ProcessID: 3352
+#           Attempting to use alternate WLF file "./wlftg757xv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftg757xv
+force -freeze sim:/top_level/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/top_level/reset 0 0
+force -freeze sim:/top_level/enable_dhcp 1 0
+force -freeze sim:/top_level/total_vlans 10 0
+run
+run
+run
+run -all
+# Compile of Top_Level.vhdl was successful with warnings.
+vsim -gui work.top_level
+# End time: 19:50:08 on Dec 06,2024, Elapsed time: 0:05:41
+# Errors: 10, Warnings: 4
+# vsim -gui work.top_level 
+# Start time: 19:50:08 on Dec 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.types_pkg
+# Loading work.top_level(structural)
+# Loading work.vlan_allocation(behavioral)
+# ** Error: (vsim-86) Argument value -1062731520 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Region: /top_level/gen_dhcp(0)/dhcp_inst File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+# Loading work.dhcp_server(behavioral)
+add wave -position insertpoint sim:/top_level/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: raditya  Hostname: BONIFASIUSRF6C0  ProcessID: 3352
+#           Attempting to use alternate WLF file "./wlftjx4q1b".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjx4q1b
+force -freeze sim:/top_level/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/top_level/reset 0 0
+force -freeze sim:/top_level/enable_dhcp 1 0
+force -freeze sim:/top_level/total_vlans 15 0
+# ** Fatal: (vsim-3421) Value 15 for total_vlans is out of range 1 to 10.
+#    Time: 0 ps  Iteration: 0  Process: /top_level/line__82 File: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl Line: UNKNOWN
+force -freeze sim:/top_level/total_vlans 5 0
+run
+# Fatal error at an unknown location
+# 
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+run
+# Cannot continue because of fatal error.
+# Compile of Top_Level.vhdl was successful.
