@@ -29,7 +29,7 @@ Pada program VHDL yang sudah ada, masukan `INSTRUCTION_IN` yang berisi `OPCODE` 
 Kita melakukan testing terhadap program yang telah kita buat, untuk hasil testing selengkapnya dapat dilihat pada laporan proyek akhir
 ## Authors
 
-- [@MorpKnight](https://www.github.com/MorpKnight)
-- [@annisa-ardelia](https://www.github.com/annisa-ardelia)
-- [@GeraldoGio](https://github.com/GeraldoGio)
-- [@arifatalya](https://github.com/arifatalya)
+- []()
+- []()
+- []()
+- []()
