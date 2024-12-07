@@ -25,7 +25,6 @@ architecture Behavioral of DHCP_Server is
     signal last_ip        : std_logic_vector(31 downto 0) := (others => '0'); -- Tracking last IP assigned
     signal allocated_ip   : STD_LOGIC_VECTOR(31 downto 0) := (others => '0'); 
 
-    file input_file  : text open read_mode is "dhcp_input.txt";
     file output_file : text open write_mode is "dhcp_output.txt";
 
     -- Procedure to write to output.txt
@@ -62,15 +61,14 @@ begin
 
     -- State Machine Logic
     process(current_state, mulai, num_devices)
-        variable host_bits : integer := 0; -- Count of '0' in subnet mask
         variable set_gateway   : STD_LOGIC_VECTOR(7 downto 0);
         variable set_ip        : STD_LOGIC_VECTOR(7 downto 0);
         variable count        : integer := 0;
         variable temp_ip      : std_logic_vector(31 downto 0);  -- Temporary variable for allocated IP
-        variable var_last_ip  : std_logic_vector(31 downto 0) := (others => '0'); -- Tracking last IP assigned
     begin
         -- Default output values
         next_state <= current_state;
+        selesai <= '0';
 
         case current_state is
             when idle =>
@@ -80,7 +78,6 @@ begin
                 if mulai = '1' and count < num_devices then
                     next_state <= discover;
                     count := count + 1;
-                    selesai <= '0';
                 else
                     next_state <= idle;
                     selesai <= '1';
@@ -116,6 +113,7 @@ begin
                 temp_ip := allocated_ip;  -- Use temporary variable
                 write_ip_to_file(temp_ip);  -- Call procedure to write to file
                 next_state <= idle;
+                selesai <= '1';
 
         end case;
     end process;
