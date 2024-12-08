@@ -43,7 +43,7 @@ architecture Structural of Top_Level is
     -- Internal signals
     signal valid_vlan    : std_logic;
     signal vlan_id_internal : std_logic_vector(9 downto 0);
-    signal ip_allocated  : ip_array;
+    signal ip_allocated  : ip_array := (others => (others => '0'));  -- Initialize ip_allocated
     signal ip : std_logic_vector(31 downto 0);
     signal selesai_signal : std_logic_vector(9 downto 0);
     signal dhcp_enable   : std_logic_vector(9 downto 0);
@@ -92,7 +92,7 @@ begin
     end generate;
 
     -- Process to handle reset and clock logic
-    process(clk, reset)
+    process(clk)
     begin
         if rising_edge(clk) then
             for i in 0 to 9 loop
@@ -108,7 +108,7 @@ begin
     end process;
 
     -- Connect outputs
-    ip_addresses <= ip_allocated;
+    ip_addresses <= ip_allocated;  -- Uncomment this line
     status <= vlan_id_internal;
     selesai <= selesai_signal;
 

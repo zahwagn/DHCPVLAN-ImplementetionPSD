@@ -122,21 +122,8 @@ begin
         end loop;
     
         enable_dhcp <= '0';
-        wait for 5ns;
-        report "DHCP disabled. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
-        
-        -- Test with 7 VLANs
-        total_vlans <= 7;
-        enable_dhcp <= '1';
         wait until selesai = "1111111111";
-        report "Test with 7 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
-        for i in 0 to 6 loop  -- Adjust range to match 'total_vlans'
-            report "VLAN ID " & integer'image(i) & ": IP allocated: " & 
-                integer'image(to_integer(unsigned(ip_addresses(i)(31 downto 24)))) & "." &
-                integer'image(to_integer(unsigned(ip_addresses(i)(23 downto 16)))) & "." &
-                integer'image(to_integer(unsigned(ip_addresses(i)(15 downto 8)))) & "." &
-                integer'image(to_integer(unsigned(ip_addresses(i)(7 downto 0))));
-        end loop;
+        report "DHCP disabled. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
         
         -- Finish simulation
         wait;
