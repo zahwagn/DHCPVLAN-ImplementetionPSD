@@ -3,7 +3,7 @@
 ## Project Description
 DHCP dan VLAN Management dalam Jaringan Komputer digunakan untuk **mengalokasikan IP secara dinamis** dengan memisahkan jaringan berdasarkan VLAN ID dengan menggunakan **Top Level** sebagai modul utama yang menghubungkan VLAN Management dengan FSM untuk memberi dan meminta IP Address kepada _client_. Sementara itu, pada implementasi ini menggunakan **VLAN Manager** sebagai _slave_ untuk menerima perintah dari client.
 
-## ProjectImplementation
+## Project Implementation
 Mengimplementasikan cara kerja DHCP dan Management VLAN sebagai alokasi yang dinamis, DHCP bekerja dimulai dari *client* yang membutuhkan konfigurasi jaringan (**discover**) untuk menetapkan _gateway_ dan _subnet mask_, DHCP memberikan tawaran (**offer**) konfigurasi kepada _client_ dan jika disetujui maka DHCP akan memberi tawaran (**request**) konfigurasi kepada client, setelah Server dan Client setuju maka DHCP memasuki (**ack**). Proses **Finite State Machine** tersebut (discover, offer, request, dan ack) akan memberikan output berupa _**allocated IP**_ yang ditulis dalam `dhcp_output.txt` sebagai client.
 
 FSM sebagai tahapan dari Sistem DHCP (`fsm_dhcp.vhdl`), di mana _client_ akan **mengaktifkan DHCP** dan memasukkan **VLAN ID**. DHCP Server akan menampilkan **IP Address yang telah disepakati**, **status DHCP**, dan indikasi proses jika sudah **selesai**. FSM akan bekerja berdasarkan Network, Subnet mask, dan jumlah devices (_num_devices_), kemudian DHCP Server akan **menghitung, menetapkan**, dan **mencatat** IP Address, Subnet mask, dan gateway yang telah dialokasikan yang ditampilkan sebagai _output_. 
@@ -16,6 +16,10 @@ Top Level sebagai modul utama (`Top_Level.vhdl`) menghubungkan FSM dari DHCP _(d
 Uji verifikasi dilakukan secara otomatis dengan _testbench_ (`tb.vhdl`) untuk memastikan validasi **hasil DHCP dan VLAN** secara _stimulus_. Uji coba dilakukan dengan **dua _test case_**, yaitu menggunakan 5 VLAN ID dan 10 VLAN ID yang menampilkan hasilnya pada **Report** dengan Severity **Note**.
 
 ## Result
+
+### Testing 1
+
+### Testing 2
 
 
 ## Authors
