@@ -1,7 +1,7 @@
 # Proyek Akhir DHCP VLAN-ImplementationPSD
 
 ## Project Description
-DHCP dan VLAN Management dalam Jaringan Komputer digunakan untuk **mengalokasikan IP secara dinamis** dengan memisahkan jaringan berdasarkan VLAN ID dengan menggunakan **Top Level** sebagai modul utama yang menghubungkan VLAN Management dengan FSM untuk memberi dan meminta IP Address kepada _client_. Sementara itu, pada implementasi ini menggunakan **VLAN Manager** sebagai _slave_ untuk menerima perintah dari client.
+DHCP dan VLAN Management dalam Jaringan Komputer digunakan untuk **mengalokasikan IP secara dinamis** dengan memisahkan jaringan berdasarkan VLAN ID dengan menggunakan **Top Level** sebagai modul utama yang menghubungkan VLAN Management dengan FSM untuk memberi dan meminta IP Address kepada _client_. Sementara itu, pada implementasi ini menggunakan **VLAN Manager** sebagai _slave_ untuk menerima perintah dari client atau segemnetasi network dengan **VLAN ID**.
 
 ## Project Implementation
 Mengimplementasikan cara kerja DHCP dan Management VLAN sebagai alokasi yang dinamis, DHCP bekerja dimulai dari *client* yang membutuhkan konfigurasi jaringan (**discover**) untuk menetapkan _gateway_ dan _subnet mask_, DHCP memberikan tawaran (**offer**) konfigurasi kepada _client_ dan jika disetujui maka DHCP akan memberi tawaran (**request**) konfigurasi kepada client, setelah Server dan Client setuju maka DHCP memasuki (**ack**). Proses **Finite State Machine** tersebut (discover, offer, request, dan ack) akan memberikan output berupa _**allocated IP**_ yang ditulis dalam `dhcp_output.txt` sebagai client.
