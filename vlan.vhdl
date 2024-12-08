@@ -18,7 +18,7 @@ architecture Behavioral of VLAN_Allocation is
     signal vlan_id_array_sig : integer_array := (others => 0);  -- Signal to store VLAN IDs
     signal vlan_counter      : integer := 0;
     signal state             : integer := 0;
-    signal all_vlans         : std_logic_vector(9 downto 0) := (others => '1');
+    signal all_vlans         : std_logic_vector(9 downto 0) := (others => '0');
 
 begin
 
@@ -29,25 +29,26 @@ begin
             state <= 0;
             vlan_counter <= 0;
             vlan_id_array_sig <= (others => 0);
-            all_vlans <= (others => '1');
+            all_vlans <= (others => '0');
         elsif rising_edge(clk) then
             case state is
                 when 0 =>  -- Initial state, start the process
                     if total_vlans > 0 then
                         done <= '0';
+                        all_vlans <= (others => '0');
                         state <= 1;  -- Proceed to VLAN allocation
                     end if;
 
                 when 1 =>  -- VLAN allocation
-                    if vlan_counter < total_vlans then
-                        -- Calculate VLAN ID (kelipatan 10 mulai dari 10)
-                        vlan_id_array_sig(vlan_counter) <= (vlan_counter + 1) * 10;
-                        vlan <= (others => '0');  -- Reset output
-                        -- Output all VLAN IDs
-                        vlan(vlan_counter downto 0) <= all_vlans(vlan_counter downto 0);
-                        -- Move to next VLAN
-                        vlan_counter <= vlan_counter + 1;
-                    else
+                    for i in 0 to total_vlans - 1 loop
+                        vlan_id_array_sig(i) <= (i + 1) * 10;
+                        all_vlans(i) <= '1';  -
+                    end loop;
+                    
+                    vlan <= all_vlans;
+                    vlan_counter <= vlan_counter + 1;
+                    
+                    if vlan_counter = 3 then
                         state <= 2;
                     end if;
 
