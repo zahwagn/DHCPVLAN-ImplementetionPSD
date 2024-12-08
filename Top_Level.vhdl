@@ -43,8 +43,7 @@ architecture Structural of Top_Level is
     -- Internal signals
     signal valid_vlan    : std_logic;
     signal vlan_id_internal : std_logic_vector(9 downto 0);
-    type ip_arr is array (0 to 9) of STD_LOGIC_VECTOR(31 downto 0);
-    signal ip_allocated  : ip_arr;
+    signal ip_allocated  : ip_array;
     signal ip : std_logic_vector(31 downto 0);
     signal selesai_signal : std_logic_vector(9 downto 0);
     signal dhcp_enable   : std_logic_vector(9 downto 0);
@@ -73,36 +72,29 @@ begin
             done       => valid_vlan
         );
     
-    
     -- Generate DHCP Servers based on VLANs
-    --gen_dhcp: for i in 0 to 9 generate
-        --dhcp_inst: if i < 10 generate
+    gen_dhcp: for i in 0 to 9 generate
+        dhcp_inst: if i < 10 generate
             dhcp_inst: DHCP_Server
                 port map (
                     clk           => clk,
                     reset         => reset,
-                    network       => network_values(0),  -- 192.168.i.0
+                    network       => network_values(i),  -- 192.168.i.0
                     subnet_mask   => "11111111111111111111111100000000",  -- 255.255.255.0
                     num_devices   => 10,
                     mulai         => enable_dhcp,
-                    ip_address    => ip_allocated(0),
+                    ip_address    => ip_allocated(i),
                     gateway       => open,
                     subnet_out    => open,
-                    selesai       => selesai_signal(0)
+                    selesai       => selesai_signal(i)
                 );
-        --end generate;
-    --end generate;
+        end generate;
+    end generate;
 
     -- Process to handle reset and clock logic
     process(clk, reset)
     begin
-        if reset = '1' then
-            -- Reset logic
-            for i in 0 to 9 loop
-                ip_allocated(i) <= (others => '0');
-                selesai_signal(i) <= '0';
-            end loop;
-        elsif rising_edge(clk) then
+        if rising_edge(clk) then
             for i in 0 to 9 loop
                 if i < total_vlans then
                     -- Enable DHCP for active VLANs
@@ -116,7 +108,7 @@ begin
     end process;
 
     -- Connect outputs
-    --ip_addresses <= ip_allocated;
+    ip_addresses <= ip_allocated;
     status <= vlan_id_internal;
     selesai <= selesai_signal;
 
