@@ -44,7 +44,6 @@ architecture Structural of Top_Level is
     signal valid_vlan    : std_logic;
     signal vlan_id_internal : std_logic_vector(9 downto 0);
     signal ip_allocated  : ip_array;
-    signal ip : std_logic_vector(31 downto 0);
     signal selesai_signal : std_logic_vector(9 downto 0);
     signal dhcp_enable   : std_logic_vector(9 downto 0);
     

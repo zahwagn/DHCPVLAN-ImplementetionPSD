@@ -40,12 +40,17 @@ begin
                     end if;
 
                 when 1 =>  -- VLAN allocation
-                    for i in 0 to total_vlans - 1 loop
-                        vlan_id_array_sig(i) <= (i + 1) * 10;
-                        all_vlans(i) <= '1';  -
+                    for i in 0 to 9 loop
+                        -- Calculate VLAN ID (multiples of 10 starting from 10)
+                        if i < total_vlans then
+                            vlan_id_array_sig(i) <= (i + 1) * 10;
+                            -- Update all_vlans for output
+                            all_vlans(i) <= '1';  -- Example of setting an active VLAN
+                        end if;
                     end loop;
-                    
+                    -- Update output signal and move to the next state
                     vlan <= all_vlans;
+                    
                     vlan_counter <= vlan_counter + 1;
                     
                     if vlan_counter = 3 then
