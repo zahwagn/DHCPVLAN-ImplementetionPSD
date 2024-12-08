@@ -43,7 +43,8 @@ begin
                         -- Calculate VLAN ID (kelipatan 10 mulai dari 10)
                         vlan_id_array_sig(vlan_counter) <= (vlan_counter + 1) * 10;
                         vlan <= (others => '0');  -- Reset output
-                        vlan(vlan_counter downto 0) <= all_vlans(vlan_counter downto 0);  -- Output all VLAN IDs
+                        -- Output all VLAN IDs
+                        vlan(vlan_counter downto 0) <= all_vlans(vlan_counter downto 0);
                         -- Move to next VLAN
                         vlan_counter <= vlan_counter + 1;
                     else
@@ -52,7 +53,8 @@ begin
 
                 when 2 =>  -- Indicate completion
                     done <= '1';
-                    state <= 1;  -- Go back to initial state
+                    vlan_counter <= 0;
+                    state <= 0;  -- Go back to initial state
 
                 when others =>  -- Default case
                     state <= 0;

@@ -47,10 +47,7 @@ architecture Behavioral of Top_Level_tb is
         end loop;
         return result;
     end function;
-
-    -- Function to convert std_logic_vector IP to integer IP format
     
-
 begin
 
     -- Instantiate the Unit Under Test (UUT)

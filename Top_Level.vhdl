@@ -82,7 +82,7 @@ begin
                     network       => network_values(i),  -- 192.168.i.0
                     subnet_mask   => "11111111111111111111111100000000",  -- 255.255.255.0
                     num_devices   => 10,
-                    mulai         => enable_dhcp,
+                    mulai         => std_logic(dhcp_enable(i)),
                     ip_address    => ip_allocated(i),
                     gateway       => open,
                     subnet_out    => open,
