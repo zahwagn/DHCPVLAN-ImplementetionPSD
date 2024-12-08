@@ -38,28 +38,18 @@ architecture Behavioral of Top_Level_tb is
     function to_binary_string(input : std_logic_vector(9 downto 0)) return string is
         variable result : string(1 to 10);
     begin
-        for i in 0 downto 9 loop
+        for i in 0 to 9 loop
             if input(i) = '1' then
-                result(9-i) := '1';
+                result(10-i) := '1';
             else
-                result(9-i) := '0';
+                result(10-i) := '0';
             end if;
         end loop;
         return result;
     end function;
 
     -- Function to convert std_logic_vector IP to integer IP format
-    function to_ip_string(ip: std_logic_vector) return string is
-        variable ip_integer: unsigned(31 downto 0);
-        variable octets: string(1 to 15);
-    begin
-        ip_integer := unsigned(ip);
-        octets := integer'image(to_integer(ip_integer(31 downto 24))) & "." &
-                  integer'image(to_integer(ip_integer(23 downto 16))) & "." &
-                  integer'image(to_integer(ip_integer(15 downto 8))) & "." &
-                  integer'image(to_integer(ip_integer(7 downto 0)));
-        return octets;
-    end function;
+    
 
 begin
 
@@ -95,38 +85,49 @@ begin
         wait for 2 ns;
         reset <= '0';
 
-        -- Test with 5 VLANs
+            -- Test with 5 VLANs
         total_vlans <= 5;
         enable_dhcp <= '1';
-        wait for 10 ns;
+        wait until selesai = "1111111111";
         report "Test with 5 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
-        for i in 0 to 4 loop
-            report "VLAN ID " & integer'image(i) & ": IP allocated: " & to_ip_string(ip_addresses(i));
+        for i in 0 to 4 loop  -- Adjust range to match 'total_vlans'
+            report "VLAN ID " & integer'image(i) & ": IP allocated: " & 
+                integer'image(to_integer(unsigned(ip_addresses(i)(31 downto 24)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(23 downto 16)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(15 downto 8)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(7 downto 0))));
         end loop;
-
-        -- Test with all VLANs
+    
+        -- Test with all VLANs (10 elements)
         total_vlans <= 10;
         enable_dhcp <= '1';
-        wait for 10 ns;
+        wait until selesai = "1111111111";
         report "Test with 10 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
-        for i in 0 to 9 loop
-            report "VLAN ID " & integer'image(i) & ": IP allocated: " & to_ip_string(ip_addresses(i));
+        for i in 0 to 9 loop  -- Full range of 'ip_array'
+            report "VLAN ID " & integer'image(i) & ": IP allocated: " & 
+                integer'image(to_integer(unsigned(ip_addresses(i)(31 downto 24)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(23 downto 16)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(15 downto 8)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(7 downto 0))));
         end loop;
-
-        -- Disable DHCP
-        enable_dhcp <= '0';
-        wait for 5 ns;
-        report "DHCP disabled. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
-
+    
         -- Test with 3 VLANs
         total_vlans <= 3;
         enable_dhcp <= '1';
-        wait for 10 ns;
+        wait until selesai = "1111111111";
         report "Test with 3 VLANs completed. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
-        for i in 0 to 2 loop
-            report "VLAN ID " & integer'image(i) & ": IP allocated: " & to_ip_string(ip_addresses(i));
+        for i in 0 to 2 loop  -- Adjust range to match 'total_vlans'
+            report "VLAN ID " & integer'image(i) & ": IP allocated: " & 
+                integer'image(to_integer(unsigned(ip_addresses(i)(31 downto 24)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(23 downto 16)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(15 downto 8)))) & "." &
+                integer'image(to_integer(unsigned(ip_addresses(i)(7 downto 0))));
         end loop;
-
+    
+        enable_dhcp <= '0';
+        wait until selesai = "1111111111";
+        report "DHCP disabled. Current status: " & to_binary_string(status) & ", Completion: " & to_binary_string(selesai);
+        
         -- Finish simulation
         wait;
     end process;
