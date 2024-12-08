@@ -1,13 +1,31 @@
-{C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/vlan.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:\Pribadi\Kuliah\Semester 3\Praktikum_PSD\DHCPVLAN-ImplementetionPSD\vlan.vhdl}
+{C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity VLAN_Allocation
--- Compiling architecture Behavioral of VLAN_Allocation
+-- Loading package types_pkg
+-- Compiling entity Top_Level
+-- Compiling architecture Structural of Top_Level
 
-} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl}
+} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package types_pkg
+-- Compiling entity Top_Level_tb
+-- Compiling architecture Behavioral of Top_Level_tb
+
+} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package types_pkg
+
+} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl} {0 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -17,28 +35,22 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Top_Level
 -- Compiling architecture Structural of Top_Level
 -- Loading entity VLAN_Allocation
+** Warning: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl(41): (vcom-1148) Condition in IF GENERATE must be static.
 -- Loading entity DHCP_Server
-
-} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling package types_pkg
-
-} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+** Error: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl(81): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+** Note: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl(95): VHDL Compiler exiting
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity tb_dhcp_system_textio
--- Compiling architecture Behavioral of tb_dhcp_system_textio
-
-} {} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl} {0 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl}
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-** Warning: (vcom-6) -- Waiting for lock by "azkan@DESKTOP-KLJE5EB, pid = 34812
-". Lockfile is "C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/work/_lock".
+-- Compiling entity dhcp_system_textio
+-- Compiling architecture Structural of dhcp_system_textio
+** Error: (vcom-13) Recompile work.dhcp_fsm_textio because ieee.std_logic_1164, ieee.numeric_std have changed.
+** Error (suppressible): C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(26): (vcom-1195) Cannot find expanded name "work.dhcp_fsm_textio".
+** Error: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(26): Unknown expanded name.
+** Error: (vcom-13) Recompile work.vlan_manager_textio because ieee.std_logic_1164 has changed.
+** Error (suppressible): C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(38): (vcom-1195) Cannot find expanded name "work.vlan_manager_textio".
+** Error: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(38): Unknown expanded name.
 ** Note: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(50): VHDL Compiler exiting
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -54,4 +66,13 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 ** Error: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(38): Unknown expanded name.
 ** Note: C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl(50): VHDL Compiler exiting
 
-} {12.0 13.0 14.0 16.0 17.0 18.0} {}}
+} {13.0 14.0 21.0 22.0 23.0 25.0 26.0 27.0 34.0 35.0 36.0 38.0 39.0 40.0} {}} {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/fsm_dhcp.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/fsm_dhcp.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity DHCP_Server
+-- Compiling architecture Behavioral of DHCP_Server
+
+} {} {}}

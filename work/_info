@@ -51,11 +51,11 @@ R9
 R10
 R11
 Edhcp_server
-Z12 w1733559187
+Z12 w1733632046
 Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 Z14 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 72
+!i122 163
 Z15 dC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD
 Z16 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/fsm_dhcp.vhdl
 Z17 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/fsm_dhcp.vhdl
@@ -65,9 +65,9 @@ VizLolke<a?3N1^[kQSP>62
 !s100 ^Y2mH9E9dad>B1?k3OT^_2
 Z18 OV;C;2020.1;71
 32
-Z19 !s110 1733559191
+Z19 !s110 1733638443
 !i10b 1
-Z20 !s108 1733559191.000000
+Z20 !s108 1733638443.000000
 Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/fsm_dhcp.vhdl|
 Z22 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/fsm_dhcp.vhdl|
 !i113 1
@@ -77,12 +77,12 @@ Abehavioral
 R13
 R2
 R14
-Z23 DEx4 work 11 dhcp_server 0 22 izLolke<a?3N1^[kQSP>62
-!i122 72
+DEx4 work 11 dhcp_server 0 22 izLolke<a?3N1^[kQSP>62
+!i122 163
 l51
-Z24 L20 102
-Z25 VjJQWH8iVR7MZmT:2Y27HF1
-Z26 !s100 ccEQijf3gG4fTd_7bZj[`0
+L20 102
+VjJQWH8iVR7MZmT:2Y27HF1
+!s100 ccEQijf3gG4fTd_7bZj[`0
 R18
 32
 R19
@@ -94,11 +94,11 @@ R22
 R10
 R11
 Edhcp_system_textio
-Z27 w1733480810
+Z23 w1733480810
 R13
 R2
 R14
-!i122 27
+!i122 79
 R15
 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl
 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl
@@ -108,18 +108,18 @@ V6N4a5KCG;UML68`ne@I;91
 !s100 b?>N^N?1D1lN89R;OQ1Yh3
 R18
 32
-!s110 1733554647
+!s110 1733560045
 !i10b 1
-!s108 1733554643.000000
+!s108 1733560040.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl|
 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/serverDHCP.vhdl|
 !i113 1
 R10
 R11
 Astructural
-Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z30 DEx4 work 19 vlan_manager_textio 0 22 JA[`8L7>RMd1dm]W5ZSQ01
+Z24 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z25 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z26 DEx4 work 19 vlan_manager_textio 0 22 JA[`8L7>RMd1dm]W5ZSQ01
 DEx4 work 15 dhcp_fsm_textio 0 22 ^>Q3WzgXLmlobBRRX01;j1
 R1
 R2
@@ -134,34 +134,34 @@ R7
 !s110 1733344575
 !i10b 1
 !s108 1733344575.000000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
-Z32 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
+Z28 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl|
 !i113 1
 R10
 R11
 R4
-Z33 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
-Z34 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
+Z29 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
+Z30 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/serverDHCP.vhdl
 Etb_dhcp_system_textio
-R27
+R23
 R13
 R2
 R14
 !i122 9
 R15
-Z35 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl
-Z36 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl
+Z31 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl
+Z32 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl
 l0
 L5 1
 V69PVGhmcHTW749gbMnjg:1
 !s100 iLbL<z^_;4:J@kPoeg]_J0
 R18
 32
-Z37 !s110 1733488260
+Z33 !s110 1733488260
 !i10b 1
-Z38 !s108 1733488260.000000
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl|
-Z40 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl|
+Z34 !s108 1733488260.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl|
+Z36 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/tb.vhdl|
 !i113 1
 R10
 R11
@@ -177,40 +177,40 @@ V5Uo9mf<JHQ9MJz=4@VeCI3
 !s100 j5E[dN976M@=A[ez5J`gX2
 R18
 32
-R37
+R33
 !i10b 1
-R38
-R39
-R40
+R34
+R35
+R36
 !i113 1
 R10
 R11
 Etextio_example
-Z41 w1733223717
-R28
-R29
+Z37 w1733223717
+R24
+R25
 R2
 R3
 R4
-R34
-R33
+R30
+R29
 l0
 L7
 Vo?2F6RAQec@f5EO<?]T7H0
 !s100 `a]Vi<EK]WMAZV6f8mGS71
 R7
 32
-Z42 !s110 1733223724
+Z38 !s110 1733223724
 !i10b 1
-Z43 !s108 1733223724.000000
-R31
-R32
+Z39 !s108 1733223724.000000
+R27
+R28
 !i113 1
 R10
 R11
 Abehavioral
-R28
-R29
+R24
+R25
 R2
 R3
 DEx4 work 14 textio_example 0 22 o?2F6RAQec@f5EO<?]T7H0
@@ -220,65 +220,108 @@ ValTnLdAlYNViU5>@D:f=V0
 !s100 zUf?o?=SfbnKBTB;S[3ic3
 R7
 32
-R42
+R38
 !i10b 1
-R43
-R31
-R32
+R39
+R27
+R28
 !i113 1
 R10
 R11
 Etop_level
-Z44 w1733489462
-Z45 DPx4 work 9 types_pkg 0 22 7E>jnZi92c0E>R_c`]?<m0
+Z40 w1733637552
+Z41 DPx4 work 9 types_pkg 0 22 7E>jnZi92c0E>R_c`]?<m0
 R13
 R2
 R14
-!i122 24
+!i122 174
 R15
-Z46 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
-Z47 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+Z42 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
+Z43 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl
 l0
 L6 1
 VNZSXMW:HE8`h8Qa8=_ml]2
 !s100 1E4Wl^68@I9@T]`XLjm241
 R18
 32
-Z48 !s110 1733554607
+Z44 !s110 1733640150
 !i10b 1
-Z49 !s108 1733554607.000000
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl|
-Z51 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl|
+Z45 !s108 1733640150.000000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl|
+Z47 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/Top_Level.vhdl|
 !i113 1
 R10
 R11
 Astructural
-R23
-Z52 DEx4 work 15 vlan_allocation 0 22 X9T77IL:e06`iKDeP^2^l1
-R45
+R41
 R13
 R2
 R14
 DEx4 work 9 top_level 0 22 NZSXMW:HE8`h8Qa8=_ml]2
-!i122 24
-l26
-L18 66
-VJVdRMSh0bH2Uh[o2jRW=40
-!s100 29]PJ7V21ci99h2@``5JI2
+!i122 174
+l64
+L18 98
+VfL>=:g;>a=a^@n@d?<bgf3
+!s100 2jQ^dOgSJ6CV@?h32Hm^i3
 R18
 32
-R48
+R44
 !i10b 1
+R45
+R46
+R47
+!i113 1
+R10
+R11
+Etop_level_tb
+Z48 w1733636837
+R41
+R13
+R2
+R14
+!i122 179
+R15
+R31
+R32
+l0
+L6 1
+V9bElXWob=F]i@[nU>Dg5G2
+!s100 @AL3zVhF^?X3Nh2RPoTW]3
+R18
+32
+Z49 !s110 1733640241
+!i10b 1
+Z50 !s108 1733640241.000000
+R35
+R36
+!i113 1
+R10
+R11
+Abehavioral
+R41
+R13
+R2
+R14
+Z51 DEx4 work 12 top_level_tb 0 22 9bElXWob=F]i@[nU>Dg5G2
+!i122 179
+l54
+Z52 L10 126
+Z53 VG:dYG`8EdZcbTfh:Hae0A2
+Z54 !s100 ^0D=MMT8:l378c4PDXh9E2
+R18
+32
 R49
+!i10b 1
 R50
-R51
+R35
+R36
 !i113 1
 R10
 R11
 Ptypes_pkg
 R2
 R14
-!i122 10
+!i122 111
 w1733488316
 R15
 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl
@@ -289,34 +332,34 @@ V7E>jnZi92c0E>R_c`]?<m0
 !s100 dhC8NlP=YAjTk1_TVg[XJ3
 R18
 32
-!s110 1733488357
+!s110 1733560887
 !i10b 1
-!s108 1733488357.000000
+!s108 1733560887.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl|
 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/types_pkg.vhdl|
 !i113 1
 R10
 R11
 Evlan_allocation
-R27
+Z55 w1733639900
 R13
 R2
 R14
-!i122 22
+!i122 173
 R15
-Z53 8C:\Pribadi\Kuliah\Semester 3\Praktikum_PSD\DHCPVLAN-ImplementetionPSD\vlan.vhdl
-Z54 FC:\Pribadi\Kuliah\Semester 3\Praktikum_PSD\DHCPVLAN-ImplementetionPSD\vlan.vhdl
+Z56 8C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/vlan.vhdl
+Z57 FC:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/vlan.vhdl
 l0
 L5 1
 VX9T77IL:e06`iKDeP^2^l1
 !s100 h_XY[:R`bm]=D>8g>o9Fc3
 R18
 32
-Z55 !s110 1733489619
+Z58 !s110 1733640147
 !i10b 1
-Z56 !s108 1733489619.000000
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Pribadi\Kuliah\Semester 3\Praktikum_PSD\DHCPVLAN-ImplementetionPSD\vlan.vhdl|
-Z58 !s107 C:\Pribadi\Kuliah\Semester 3\Praktikum_PSD\DHCPVLAN-ImplementetionPSD\vlan.vhdl|
+Z59 !s108 1733640147.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/vlan.vhdl|
+Z61 !s107 C:/Pribadi/Kuliah/Semester 3/Praktikum_PSD/DHCPVLAN-ImplementetionPSD/vlan.vhdl|
 !i113 1
 R10
 R11
@@ -324,62 +367,62 @@ Abehavioral
 R13
 R2
 R14
-R52
-!i122 22
+DEx4 work 15 vlan_allocation 0 22 X9T77IL:e06`iKDeP^2^l1
+!i122 173
 l23
-L14 50
-V6eIPX62j?PPWB?6RkGPf:1
-!s100 kUWBfG@I58l:nJLS@GzBa0
+L14 51
+VFTdLAl8?lbEc[o2;6gTm<1
+!s100 0PiE:VBbO96XX1E:PnzVJ2
 R18
 32
-R55
-!i10b 1
-R56
-R57
 R58
+!i10b 1
+R59
+R60
+R61
 !i113 1
 R10
 R11
 Evlan_manager_textio
-Z59 w1733290313
-R28
-R29
+Z62 w1733290313
+R24
+R25
 R2
 R3
 R4
-Z60 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
-Z61 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
+Z63 8//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
+Z64 F//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl
 l0
 L7
 VJA[`8L7>RMd1dm]W5ZSQ01
 !s100 Z]DLYg^80DWHRAEORUT5H0
 R7
 32
-Z62 !s110 1733290336
+Z65 !s110 1733290336
 !i10b 1
-Z63 !s108 1733290336.000000
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
-Z65 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
+Z66 !s108 1733290336.000000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|//Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
+Z68 !s107 //Mac/Home/Documents/Kuliah/Semester_3/Praktikum_PSD/Finpro/vlan.vhdl|
 !i113 1
 R10
 R11
 Abehavioral
-R28
-R29
+R24
+R25
 R2
 R3
-R30
+R26
 l31
 L15
 VJ<ZS4zV`VQGdPXNR]81ZU0
 !s100 NO80F1Ci^TEUgT?]nPoVT1
 R7
 32
-R62
-!i10b 1
-R63
-R64
 R65
+!i10b 1
+R66
+R67
+R68
 !i113 1
 R10
 R11

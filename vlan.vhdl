@@ -52,7 +52,8 @@ begin
 
                 when 2 =>  -- Indicate completion
                     done <= '1';
-                    state <= 1;  -- Go back to initial state
+                    vlan_counter <= 0;
+                    state <= 0;  -- Go back to initial state
 
                 when others =>  -- Default case
                     state <= 0;
