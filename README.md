@@ -13,7 +13,7 @@ Segmentasi jaringan dalam DHCP dilakukan menggunakan VLAN (`vlan.vhdl`) untuk me
 Top Level sebagai modul utama (`Top_Level.vhdl`) menghubungkan FSM dari DHCP _(discover, offer request, dan ack_) dengan VLAN Management secara **_structural_**. Top Level akan meminta _client_  memasukkan banyaknya VLAN yang digunakan (_total_vlans_) dan mengaktifkan DHCP, serta menampilkan IP Address dari setiap VLAN dengan array, status setiap VLAN, dan sinyal untuk mengindikasikan jika sudah selesai.  Top Level meng-_generate_ DHCP Server yang berisi konfigurasi DHCP (**IP Address, Subnet mask, dan Gateway**). Hasil akhir dari Top Level akan **menampilkan** IP Address yang telah dialokasikan, status setiap VLAN, dan sinyal selesai.
 
 ## Testing
-Uji verifikasi dilakukan secara otomatis dengan _testbench_ (`tb.vhdl`) untuk memastikan validasi **hasil DHCP dan VLAN** secara _stimulus_. Uji coba dilakukan dengan **dua _test case_**, yaitu menggunakan 5 VLAN ID dan 10 VLAN ID yang menampilkan hasilnya pada **Report** dengan Severity **Note**.
+Uji verifikasi dilakukan secara otomatis dengan _testbench_ (`tb.vhdl`) untuk memastikan validasi **hasil DHCP dan VLAN** secara _stimulus_. Uji coba dilakukan dengan **tiga _test case_**, yaitu menggunakan 3 VLAN ID, 5 VLAN ID, dan 10 VLAN ID yang menampilkan hasilnya pada **Report** dengan Severity **Note**.
 
 ## Result
 
